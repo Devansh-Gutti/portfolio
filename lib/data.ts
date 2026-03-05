@@ -5,7 +5,7 @@ export const siteConfig = {
     "Building safety-critical AI inference infrastructure for autonomous driving — prototype to production, every time",
   email: "devanshguttikonda@gmail.com",
   github: "https://github.com/Devansh-Gutti",
-  linkedin: "https://linkedin.com/in/DevanshG",
+  linkedin: "https://www.linkedin.com/in/devansh-guttikonda-234360265/",
   resumeUrl: "/DevanshG.pdf",
 };
 
@@ -20,18 +20,26 @@ export const experiences = [
   {
     company: "NVIDIA",
     role: "Software Engineer — CUDA Safety Team",
-    period: "2025 - Present",
+    period: "Jul 2025 - Present",
     description:
       "Designing cross-VM AI inference infrastructure for safety-critical autonomous driving platforms. Building zero-copy shared-memory data paths and priority-based scheduling to enable GPU-accelerated perception workloads across mixed-criticality VMs. Co-inventor on a patent for inter-VM inference proxy architecture.",
     tech: ["C++", "CUDA", "TensorRT", "QNX", "Linux", "Python"],
   },
   {
+    company: "NVIDIA",
+    role: "SPRING Intern — OpenCL Driver Team",
+    period: "Jan 2025 - Jul 2025",
+    description:
+      "Ramped up on CUDA and OpenCL internals, contributing to driver-level features while learning GPU programming from the ground up. Leveraged Gen AI tooling to accelerate onboarding and deepen understanding of low-level GPU architecture.",
+    tech: ["C++", "CUDA", "OpenCL", "Python"],
+  },
+  {
     company: "Sensara Technologies",
     role: "Research Engineer — Aerospace & Defence",
-    period: "Mar 2024 - 2025",
+    period: "Mar 2024 - Dec 2024",
     description:
-      "Engineered deep learning cost estimation framework with Explainable AI dashboards (Shapley, DeepLift) for manufacturing process optimization.",
-    tech: ["Python", "TensorFlow", "React", "Shapley", "DeepLift"],
+      "Engineered deep learning cost estimation framework with Explainable AI dashboards (Shapley, DeepLift) for manufacturing process optimization. Co-authored a RAG-based XAI framework paper presented at ICAART 2025.",
+    tech: ["Python", "TensorFlow", "React", "RAG", "LLMs", "Shapley", "DeepLift"],
   },
   {
     company: "E-commerce Startup",
@@ -52,6 +60,13 @@ export const experiences = [
 ];
 
 export const projects = [
+  {
+    title: "Explainable AI: A RAG-Based Framework for Model Interpretability",
+    description:
+      "Co-authored research paper presenting a Retrieval-Augmented Generation framework for model interpretability. Demonstrated across healthcare, finance, and manufacturing. Presented orally at ICAART 2025.",
+    tech: ["RAG", "LLMs", "Shapley", "DeepLift", "Python"],
+    github: "https://github.com/Devansh-Gutti",
+  },
   {
     title: "Youtube Viralomics",
     description:

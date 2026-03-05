@@ -20,7 +20,7 @@ export function Hero() {
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4"
     >
       <ParticleField />
-      <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="#76b900" />
+      <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="#ffffff" />
 
       <div className="relative z-10 flex flex-col items-center text-center">
         <motion.div

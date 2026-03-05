@@ -13,7 +13,7 @@ interface ShimmerButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export function ShimmerButton({
   children,
   className,
-  shimmerColor = "#76b900",
+  shimmerColor = "#ffffff",
   background = "rgba(10, 10, 10, 1)",
   ...props
 }: ShimmerButtonProps) {

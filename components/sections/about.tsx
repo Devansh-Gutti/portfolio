@@ -23,17 +23,28 @@ export function About() {
           building cross-VM AI inference infrastructure for safety-critical
           autonomous driving platforms. I love taking ideas from prototype to
           production — collaborating across every stage of the product lifecycle,
-          from early MVPs through full-scale deployment.
+          from early MVPs through full-scale deployment. I also co-authored a
+          research paper on RAG-based Explainable AI, presented at ICAART 2025.
         </p>
       </BlurFade>
 
       <BlurFade delay={0.3}>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
           I graduated from PES University with a B.Tech in Computer Science
-          (CGPA: 8.50, MRD Scholar — top 20%). I&apos;m deeply invested in
-          integrating Gen AI into software development workflows — with hands-on
-          expertise in Claude Code, Cursor, and Codex — and I take initiative in
-          every part of the product lifecycle, from ideation to ship.
+          (CGPA: 8.50, MRD Scholar — top 20%). I&apos;m a strong advocate for
+          integrating Gen AI into development workflows — tools like Cursor,
+          Claude Code, and Codex have become a natural part of how I build and
+          ship software. I enjoy finding the right balance between AI-assisted
+          velocity and engineering rigour.
+        </p>
+      </BlurFade>
+
+      <BlurFade delay={0.35}>
+        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          Outside of work, I&apos;m pretty adventurous — I love team sports,
+          travelling, trekking, and exploring new places. I thrive in
+          collaborative environments, whether that&apos;s on the field or
+          in a codebase.
         </p>
       </BlurFade>
 

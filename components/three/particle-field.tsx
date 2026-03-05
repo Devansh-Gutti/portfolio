@@ -13,9 +13,9 @@ function Particles({ count = 2000 }: { count?: number }) {
     const colors = new Float32Array(count * 3);
     const speeds = new Float32Array(count);
 
-    const green = new THREE.Color("#22c55e");
-    const cyan = new THREE.Color("#06b6d4");
-    const white = new THREE.Color("#f8fafc");
+    const green = new THREE.Color("#ffffff");
+    const cyan = new THREE.Color("#a1a1aa");
+    const white = new THREE.Color("#71717a");
 
     for (let i = 0; i < count; i++) {
       const i3 = i * 3;

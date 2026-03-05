@@ -13,7 +13,7 @@ interface MagicCardProps {
 export function MagicCard({
   children,
   className,
-  gradientColor = "rgba(118, 185, 0, 0.15)",
+  gradientColor = "rgba(255, 255, 255, 0.1)",
 }: MagicCardProps) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);

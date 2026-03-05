@@ -44,7 +44,7 @@ export function Contact() {
             >
               <ShimmerButton
                 background="rgba(20, 20, 20, 1)"
-                shimmerColor="#00d4aa"
+                shimmerColor="#ffffff"
               >
                 <Download size={18} />
                 Resume
