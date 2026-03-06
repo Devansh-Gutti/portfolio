@@ -79,7 +79,7 @@ export const research = [
   {
     title: "Prediction of Post-Stroke Vascular Events: A Novel Two-Stage Machine Learning Model Integrating Platelet Function and Clinical Data",
     venue: "Under Review",
-    year: 2025,
+    year: 2026,
     status: "Submitted" as const,
     abstract:
       "Had the opportunity to work with multiple faculty members of PES University and doctors to develop a novel two-stage ML model integrating biomarkers and clinical variables to predict recurrent vascular events after ischemic stroke. Uses Random Forest regression and classification with GAN-based class balancing.",
