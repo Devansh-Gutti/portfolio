@@ -18,7 +18,7 @@ export const heroFacts = [
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Experience", link: "#experience" },
-  { name: "Research", link: "#research" },
+  { name: "Research & Publications", link: "#research" },
   { name: "Education", link: "#education" },
   { name: "Projects", link: "#projects" },
 ];

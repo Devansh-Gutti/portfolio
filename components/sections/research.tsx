@@ -23,7 +23,7 @@ export function Research() {
     >
       <BlurFade delay={0.1}>
         <h2 className="text-3xl font-bold sm:text-4xl font-display">
-          Research
+          Research and Publications
         </h2>
         <div className="mt-3 flex items-end gap-3">
           <p className="text-muted-foreground">
