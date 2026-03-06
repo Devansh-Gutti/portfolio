@@ -5,6 +5,7 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { research } from "@/lib/data";
 import { ExternalLink, FileText } from "lucide-react";
+import Image from "next/image";
 
 function StatusBadge({ status }: { status: string }) {
   return (
@@ -28,25 +29,14 @@ export function Research() {
           <p className="text-muted-foreground">
             Fun weekend rabbit holes that turned into something interesting
           </p>
-          {/* Pixelated rabbit — currentColor inherits muted-foreground, adapts to light/dark */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            className="h-5 w-5 shrink-0 text-muted-foreground"
+          <Image
+            src="/rabbit.avif"
+            alt="pixel rabbit"
+            width={24}
+            height={24}
+            className="shrink-0"
             style={{ animation: "rabbit-bounce 1.2s ease-in-out infinite" }}
-            fill="currentColor"
-            aria-label="pixel rabbit"
-          >
-            <rect x="3" y="0" width="2" height="4" />
-            <rect x="11" y="0" width="2" height="4" />
-            <rect x="2" y="4" width="12" height="6" />
-            <rect x="4" y="5" width="2" height="2" fill="var(--background)" />
-            <rect x="10" y="5" width="2" height="2" fill="var(--background)" />
-            <rect x="3" y="10" width="10" height="4" />
-            <rect x="3" y="14" width="3" height="2" />
-            <rect x="10" y="14" width="3" height="2" />
-            <rect x="13" y="11" width="2" height="2" />
-          </svg>
+          />
         </div>
       </BlurFade>
       <style>{`

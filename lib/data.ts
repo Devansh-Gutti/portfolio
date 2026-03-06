@@ -75,12 +75,12 @@ export const experiences = [
 
 export const research = [
   {
-    title: "Coming Soon",
-    venue: "TBD",
+    title: "Prediction of Post-Stroke Vascular Events: A Novel Two-Stage Machine Learning Model Integrating Platelet Function and Clinical Data",
+    venue: "Under Review",
     year: 2025,
-    status: "In Progress" as const,
+    status: "Submitted" as const,
     abstract:
-      "Details coming soon — stay tuned.",
+      "Had the opportunity to work with multiple faculty members of PES University and doctors to develop a novel two-stage ML model integrating AA-induced platelet aggregation, serum biomarkers, and clinical variables to predict recurrent vascular events after ischemic stroke. Uses Random Forest regression and classification with GAN-based class balancing, with interpretability via SHAP and LIME.",
   },
   {
     title: "Explainable AI: A Retrieval-Augmented Generation Based Framework for Model Interpretability",
@@ -93,11 +93,12 @@ export const research = [
   },
   {
     title: "YouTube Viralomics: A Scoring Framework by Analyzing Engagement Metrics in the Indian Context",
-    venue: "Under Review",
+    venue: "IEEE ICDDS 2024",
     year: 2024,
-    status: "Submitted" as const,
+    status: "Published" as const,
     abstract:
       "Develops a unique 'viralomics' framework to measure virality using 10,000 trending YouTube videos from Indian creators. Employs statistical techniques for feature elimination, regression analysis, and Particle Swarm Optimization to derive a virality score achieving R² of 0.913 and MSE of 0.0020, validated through a two-step process.",
+    link: "https://ieeexplore.ieee.org/document/10910637",
   },
 ];
 
