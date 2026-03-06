@@ -12,7 +12,7 @@ export function About() {
   return (
     <SectionWrapper
       id="about"
-      className="relative mx-auto max-w-5xl px-6 py-24 md:py-32"
+      className="relative mx-auto max-w-5xl px-6 py-16 md:py-20"
     >
       <div className="flex flex-col gap-10 md:flex-row md:items-start md:gap-12">
         <div className="flex flex-1 flex-col justify-between">

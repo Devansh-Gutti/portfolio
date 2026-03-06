@@ -9,12 +9,15 @@ export function Experience() {
   return (
     <SectionWrapper
       id="experience"
-      className="relative mx-auto max-w-5xl px-6 py-24 md:py-32"
+      className="relative mx-auto max-w-5xl px-6 py-16 md:py-20"
     >
       <BlurFade delay={0.1}>
         <h2 className="text-3xl font-bold sm:text-4xl font-display">
           Experience
         </h2>
+        <p className="mt-3 text-muted-foreground">
+          Where I&apos;ve been building, learning, and occasionally breaking things.
+        </p>
       </BlurFade>
 
       <div className="mt-10 flex flex-col gap-4">

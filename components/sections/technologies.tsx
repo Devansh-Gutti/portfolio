@@ -15,7 +15,7 @@ function TechBadge({ item }: { item: TechItem }) {
           alt=""
           width={14}
           height={14}
-          className="shrink-0 dark:invert"
+          className="shrink-0"
           loading="lazy"
         />
       ) : (
@@ -32,7 +32,7 @@ export function Technologies() {
   return (
     <SectionWrapper
       id="technologies"
-      className="relative mx-auto max-w-5xl px-6 py-24 md:py-32"
+      className="relative mx-auto max-w-5xl px-6 py-16 md:py-20"
     >
       <BlurFade delay={0.1}>
         <h2 className="text-3xl font-bold sm:text-4xl font-display">

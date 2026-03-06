@@ -10,7 +10,7 @@ export function Projects() {
   return (
     <SectionWrapper
       id="projects"
-      className="relative mx-auto max-w-5xl px-6 py-24 md:py-32"
+      className="relative mx-auto max-w-5xl px-6 py-16 md:py-20"
     >
       <BlurFade delay={0.1}>
         <h2 className="text-3xl font-bold sm:text-4xl font-display">
