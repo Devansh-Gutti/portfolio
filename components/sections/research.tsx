@@ -24,10 +24,38 @@ export function Research() {
         <h2 className="text-3xl font-bold sm:text-4xl font-display">
           Research
         </h2>
-        <p className="mt-3 text-muted-foreground">
-          Fun weekend rabbit holes that turned into something interesting
-        </p>
+        <div className="mt-3 flex items-center gap-2.5">
+          <p className="text-muted-foreground">
+            Fun weekend rabbit holes that turned into something interesting
+          </p>
+          {/* Pixelated rabbit — currentColor inherits muted-foreground, adapts to light/dark */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            className="h-5 w-5 shrink-0 text-muted-foreground"
+            style={{ animation: "rabbit-bounce 1.2s ease-in-out infinite" }}
+            fill="currentColor"
+            aria-label="pixel rabbit"
+          >
+            <rect x="3" y="0" width="2" height="4" />
+            <rect x="11" y="0" width="2" height="4" />
+            <rect x="2" y="4" width="12" height="6" />
+            <rect x="4" y="5" width="2" height="2" fill="var(--background)" />
+            <rect x="10" y="5" width="2" height="2" fill="var(--background)" />
+            <rect x="3" y="10" width="10" height="4" />
+            <rect x="3" y="14" width="3" height="2" />
+            <rect x="10" y="14" width="3" height="2" />
+            <rect x="13" y="11" width="2" height="2" />
+          </svg>
+        </div>
       </BlurFade>
+      <style>{`
+        @keyframes rabbit-bounce {
+          0%, 100% { transform: translateY(0px); }
+          40%       { transform: translateY(-4px); }
+          60%       { transform: translateY(-2px); }
+        }
+      `}</style>
 
       <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {research.map((paper, index) => (
