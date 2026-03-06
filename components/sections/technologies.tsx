@@ -3,6 +3,7 @@
 import { SectionWrapper } from "@/components/animations/section-wrapper";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { ContainerScroll } from "@/components/aceternityui/container-scroll";
+import Image from "next/image";
 import { technologies } from "@/lib/data";
 import type { TechItem } from "@/lib/data";
 
@@ -10,13 +11,13 @@ function TechBadge({ item }: { item: TechItem }) {
   return (
     <div className="flex items-center gap-2 rounded-lg border border-border/60 bg-background px-3 py-2 transition-colors hover:border-muted-foreground/40">
       {item.icon ? (
-        <img
+        <Image
           src={`https://cdn.simpleicons.org/${item.icon}`}
           alt={item.name}
           width={16}
           height={16}
+          unoptimized
           className="tech-icon shrink-0"
-          loading="lazy"
         />
       ) : (
         <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-sm bg-muted text-[8px] font-bold text-muted-foreground font-mono">
