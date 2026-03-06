@@ -56,15 +56,26 @@ export function Education() {
                     </div>
                     {edu.highlights.length > 0 && (
                       <ul className="mt-3 flex flex-col gap-1.5">
-                        {edu.highlights.map((h) => (
-                          <li
-                            key={h}
-                            className="flex items-start gap-2 text-sm text-muted-foreground"
-                          >
-                            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-muted-foreground/50" />
-                            {h}
-                          </li>
-                        ))}
+                        {edu.highlights.map((h) => {
+                          const dashIndex = h.indexOf(" — ");
+                          return (
+                            <li
+                              key={h}
+                              className="flex items-start gap-2 text-sm text-muted-foreground"
+                            >
+                              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-muted-foreground/50" />
+                              {dashIndex > -1 ? (
+                                <span>
+                                  <span className="font-semibold text-foreground">{h.slice(0, dashIndex)}</span>
+                                  {" — "}
+                                  {h.slice(dashIndex + 3)}
+                                </span>
+                              ) : (
+                                h
+                              )}
+                            </li>
+                          );
+                        })}
                       </ul>
                     )}
                   </div>

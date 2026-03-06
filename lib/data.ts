@@ -112,10 +112,10 @@ export const education = [
     grade: "CGPA: 8.71",
     highlights: [
       "MRD Scholarship — Awarded to the top 20% of students based on academic performance.",
-      "Teaching Assistant — Centre of Innovation and Entrepreneurship: Mentored student teams and supported entrepreneurship programs focused on product development and innovation.",
-      "Entrepreneurship & Innovation: Collaboratively led a team through ideation, prototyping, and customer discovery to build an Extended Reality educational platform, developing and validating a Minimum Viable Product (MVP) through user feedback.",
-      "Leadership & Events: Event Lead for E-Summit and Maaya (2023, 2024), organizing entrepreneurship and innovation events and interacting with founders, investors, and student builders. Also actively participated in hackathons and coding competitions across campus.",
-      "Coursework: OS, DSA, Compiler Design, Databases, Cloud Computing, ML/AI, Big Data (Kafka, Spark).",
+      "Teaching Assistant — Centre of Innovation and Entrepreneurship. Mentored student teams and supported entrepreneurship programs focused on product development and innovation.",
+      "Entrepreneurship & Innovation — Collaboratively led a team through ideation, prototyping, and customer discovery to build an Extended Reality educational platform, developing and validating a Minimum Viable Product (MVP) through user feedback.",
+      "Leadership & Events — Event Lead for E-Summit and Maaya (2023, 2024), organizing entrepreneurship and innovation events and interacting with founders, investors, and student builders. Also actively participated in hackathons and coding competitions across campus.",
+      "Coursework — OS, DSA, Compiler Design, Databases, Cloud Computing, ML/AI, Big Data (Kafka, Spark).",
     ],
   },
 ];

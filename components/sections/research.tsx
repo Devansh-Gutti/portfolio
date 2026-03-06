@@ -27,7 +27,7 @@ export function Research() {
         </h2>
         <div className="mt-3 flex items-end gap-3">
           <p className="text-muted-foreground">
-            Fun weekend rabbit holes that turned into something interesting
+            Fun weekend rabbit holes that turned into something interesting.
           </p>
           <Image
             src="/rabbit.avif"

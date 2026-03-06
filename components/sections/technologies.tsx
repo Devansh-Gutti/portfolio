@@ -39,7 +39,7 @@ export function Technologies() {
           Technologies
         </h2>
         <p className="mt-3 text-muted-foreground">
-          Tools and technologies I work with day-to-day
+          Tools and technologies I work with day-to-day.
         </p>
       </BlurFade>
 
