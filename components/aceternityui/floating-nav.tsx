@@ -48,7 +48,7 @@ export function FloatingNav({ navItems, className }: FloatingNavProps) {
           </a>
         ))}
         <a
-          href="#contact"
+          href="#about"
           className="hidden sm:block rounded-full bg-foreground px-4 py-1.5 text-sm font-medium text-background transition-transform hover:scale-105"
         >
           Contact
@@ -80,7 +80,7 @@ export function FloatingNav({ navItems, className }: FloatingNavProps) {
             </a>
           ))}
           <a
-            href="#contact"
+            href="#about"
             className="rounded-full bg-foreground px-6 py-2 text-lg font-medium text-background"
             onClick={() => setMobileOpen(false)}
           >
