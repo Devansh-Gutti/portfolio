@@ -55,21 +55,33 @@ export function Experience() {
                   {exp.logo ? (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
-                      src={exp.logo.startsWith("http") ? exp.logo : `https://cdn.simpleicons.org/${exp.logo}`}
+                      src={`https://cdn.simpleicons.org/${exp.logo}`}
                       alt={exp.company}
                       width={24}
                       height={24}
                       className="mt-0.5 shrink-0 rounded-sm"
                     />
-                  ) : "logoText" in exp && exp.logoText ? (
+                  ) : "logoText" in exp && (exp as Record<string, unknown>).logoText ? (
                     <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-foreground text-background text-[10px] font-bold font-mono">
-                      {exp.logoText as string}
+                      {(exp as Record<string, unknown>).logoText as string}
                     </span>
                   ) : null}
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground">
-                      {exp.company}
-                    </h3>
+                    {"url" in exp && (exp as Record<string, unknown>).url ? (
+                      <a
+                        href={(exp as Record<string, unknown>).url as string}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-lg font-semibold text-foreground hover:underline"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {exp.company}
+                      </a>
+                    ) : (
+                      <h3 className="text-lg font-semibold text-foreground">
+                        {exp.company}
+                      </h3>
+                    )}
                     <p className="text-sm text-muted-foreground">{exp.role}</p>
                   </div>
                 </div>

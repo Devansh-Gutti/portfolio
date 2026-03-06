@@ -12,7 +12,7 @@ export const siteConfig = {
 export const heroFacts = [
   "Thanks for stopping by — welcome to my digital space!",
   "You'll find me working across GPU platforms, accelerated computing, and safety-critical software.",
-  "And yes — I love pushing the boundaries with vibe coding :).",
+  "And yes — I love pushing the boundaries with vibe coding :)",
 ];
 
 export const navItems = [
@@ -27,6 +27,7 @@ export const experiences = [
   {
     company: "NVIDIA",
     logo: "nvidia",
+    url: "https://www.nvidia.com/",
     role: "Software Engineer — CUDA Safety Team",
     period: "Jan 2025 - Present",
     description:
@@ -40,7 +41,9 @@ export const experiences = [
   },
   {
     company: "Sensara Technologies",
-    logo: "/sensara-logo.png",
+    logo: null,
+    logoText: "SE",
+    url: "https://sansera.in/",
     role: "Research Engineer — Aerospace & Defence",
     period: "Mar 2024 - Dec 2024",
     description:
@@ -54,7 +57,9 @@ export const experiences = [
   },
   {
     company: "CompanyStore.io",
-    logo: "/companystore-logo.avif",
+    logo: null,
+    logoText: "CS",
+    url: "https://www.companystore.io/",
     role: "Data Analyst Intern",
     period: "Jun 2023 - Aug 2023",
     description:
