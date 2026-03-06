@@ -117,11 +117,6 @@ export function About() {
         </BlurFade>
       </div>
 
-      <BlurFade delay={0.5}>
-        <p className="mt-12 text-center text-xs text-muted-foreground/50 font-mono">
-          Built with Next.js, Tailwind CSS & Framer Motion
-        </p>
-      </BlurFade>
     </SectionWrapper>
   );
 }

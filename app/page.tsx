@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Background />
       <FloatingNavWrapper />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Experience />

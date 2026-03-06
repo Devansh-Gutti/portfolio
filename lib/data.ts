@@ -63,19 +63,6 @@ export const experiences = [
     ],
     tech: ["Python", "Pandas", "Postman", "Zoho Analytics"],
   },
-  {
-    company: "CIE, PES University",
-    role: "Project Lead",
-    period: "Jan 2023 - May 2023",
-    description:
-      "Led team from ideation to customer validation building an Extended Reality educational platform MVP.",
-    details: [
-      "Collaboratively led a team through ideation, prototyping, customer discovery, and validation stages",
-      "Developed and validated a Minimum Viable Product by engaging with potential users",
-      "Ensured a compelling value proposition for an Extended Reality educational platform",
-    ],
-    tech: ["XR", "Prototyping", "Customer Discovery"],
-  },
 ];
 
 export const research = [
