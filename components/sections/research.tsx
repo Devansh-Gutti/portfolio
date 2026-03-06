@@ -25,16 +25,16 @@ export function Research() {
         <h2 className="text-3xl font-bold sm:text-4xl font-display">
           Research
         </h2>
-        <div className="mt-3 flex items-center gap-2.5">
+        <div className="mt-3 flex items-end gap-3">
           <p className="text-muted-foreground">
             Fun weekend rabbit holes that turned into something interesting
           </p>
           <Image
             src="/rabbit.avif"
             alt="pixel rabbit"
-            width={24}
-            height={24}
-            className="shrink-0"
+            width={40}
+            height={40}
+            className="shrink-0 mb-[-2px]"
             style={{ animation: "rabbit-bounce 1.2s ease-in-out infinite" }}
           />
         </div>

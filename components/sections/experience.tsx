@@ -62,7 +62,10 @@ export function Experience() {
                       className="mt-0.5 shrink-0 rounded-sm"
                     />
                   ) : "logoText" in exp && (exp as Record<string, unknown>).logoText ? (
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-foreground text-background text-[10px] font-bold font-mono">
+                    <span
+                      className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md text-white text-[10px] font-bold font-mono"
+                      style={{ backgroundColor: ((exp as Record<string, unknown>).logoColor as string) || "var(--foreground)" }}
+                    >
                       {(exp as Record<string, unknown>).logoText as string}
                     </span>
                   ) : null}

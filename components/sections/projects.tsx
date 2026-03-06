@@ -24,29 +24,17 @@ export function Projects() {
             <ExpandableCard
               className="flex-1"
               expandedContent={
-                <div className="space-y-3">
-                  <ul className="space-y-2">
-                    {project.details.map((detail) => (
-                      <li
-                        key={detail}
-                        className="flex items-start gap-2 text-sm leading-relaxed text-muted-foreground"
-                      >
-                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted-foreground/50" />
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-muted-foreground"
-                  >
-                    <Github size={14} />
-                    View on GitHub
-                  </a>
-                </div>
+                <ul className="space-y-2">
+                  {project.details.map((detail) => (
+                    <li
+                      key={detail}
+                      className="flex items-start gap-2 text-sm leading-relaxed text-muted-foreground"
+                    >
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted-foreground/50" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
               }
             >
               <h3 className="text-lg font-semibold text-foreground">
@@ -55,7 +43,7 @@ export function Projects() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {project.description}
               </p>
-              <div className="mt-3 flex flex-wrap gap-2">
+              <div className="mt-3 flex flex-wrap items-center gap-2">
                 {project.tech.map((t) => (
                   <span
                     key={t}
@@ -65,6 +53,16 @@ export function Projects() {
                   </span>
                 ))}
               </div>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-muted-foreground"
+              >
+                <Github size={14} />
+                View on GitHub
+              </a>
             </ExpandableCard>
           </BlurFade>
         ))}
