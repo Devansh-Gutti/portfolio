@@ -97,13 +97,6 @@ export const education = [
       "Event Lead — Esummit, Maaya '23 and '24",
     ],
   },
-  {
-    institution: "Gear Innovative International School",
-    degree: "CBSE Senior Secondary",
-    period: "Jun 2019 - Jun 2021",
-    grade: "Class 12: 88% | Class 10: 91.6%",
-    highlights: [],
-  },
 ];
 
 export interface TechItem {

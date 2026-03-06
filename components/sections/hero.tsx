@@ -19,7 +19,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4"
+      className="relative z-20 flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 bg-background"
     >
       <ParticleField />
       <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="#ffffff" />

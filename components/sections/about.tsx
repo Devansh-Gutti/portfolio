@@ -14,15 +14,15 @@ export function About() {
       id="about"
       className="relative mx-auto max-w-5xl px-6 py-24 md:py-32"
     >
-      <BlurFade delay={0.1}>
-        <h2 className="text-3xl font-bold sm:text-4xl font-display">
-          About <span className="text-accent">Me</span>
-        </h2>
-      </BlurFade>
-
-      <div className="mt-8 flex flex-col gap-10 md:flex-row md:items-start md:gap-12">
+      <div className="flex flex-col gap-10 md:flex-row md:items-start md:gap-12">
         <div className="flex flex-1 flex-col justify-between">
-          <div className="space-y-5">
+          <BlurFade delay={0.1}>
+            <h2 className="text-3xl font-bold sm:text-4xl font-display">
+              About <span className="text-accent">Me</span>
+            </h2>
+          </BlurFade>
+
+          <div className="mt-6 space-y-5">
             <BlurFade delay={0.2}>
               <p className="text-lg leading-relaxed text-muted-foreground">
                 I&apos;m a software engineer working on CUDA safety at NVIDIA,
@@ -103,7 +103,7 @@ export function About() {
           </BlurFade>
         </div>
 
-        <BlurFade delay={0.25} className="shrink-0 w-full md:w-72 lg:w-80">
+        <BlurFade delay={0.15} className="shrink-0 w-full md:w-72 lg:w-80">
           <ImageGeneration>
             <Image
               src="/about-me.png"
@@ -116,7 +116,6 @@ export function About() {
           </ImageGeneration>
         </BlurFade>
       </div>
-
     </SectionWrapper>
   );
 }
