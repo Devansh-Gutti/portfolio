@@ -21,6 +21,7 @@ const config: Config = {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         display: ["var(--font-display)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
+        terminal: ["var(--font-terminal)", "monospace"],
       },
       animation: {
         shimmer: "shimmer 2s linear infinite",
