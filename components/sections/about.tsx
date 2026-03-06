@@ -61,24 +61,21 @@ export function About() {
                 projects, or explore new opportunities. Feel free to reach out!
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-3">
-                <a href={`mailto:${siteConfig.email}`}>
-                  <ShimmerButton>
-                    <Mail size={16} />
-                    Say Hello
-                  </ShimmerButton>
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-[#0a0a0a] px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:scale-105"
+                >
+                  <Mail size={16} />
+                  Say Hello
                 </a>
                 <a
                   href={siteConfig.resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-all duration-300 hover:scale-105"
                 >
-                  <ShimmerButton
-                    background="rgba(20, 20, 20, 1)"
-                    shimmerColor="#ffffff"
-                  >
-                    <Download size={16} />
-                    Resume
-                  </ShimmerButton>
+                  <Download size={16} />
+                  Resume
                 </a>
                 <a
                   href={siteConfig.github}

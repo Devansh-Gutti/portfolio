@@ -7,12 +7,14 @@ import { Technologies } from "@/components/sections/technologies";
 import { Projects } from "@/components/sections/projects";
 import { FloatingNavWrapper } from "@/components/nav/floating-nav-wrapper";
 import { Background } from "@/components/providers/background";
+import { FixedThemeToggle } from "@/components/ui/fixed-theme-toggle";
 
 export default function Home() {
   return (
     <>
       <Background />
       <FloatingNavWrapper />
+      <FixedThemeToggle />
       <main className="relative z-10">
         <Hero />
         <About />

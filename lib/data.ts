@@ -26,6 +26,7 @@ export const navItems = [
 export const experiences = [
   {
     company: "NVIDIA",
+    logo: "nvidia",
     role: "Software Engineer — CUDA Safety Team",
     period: "Jan 2025 - Present",
     description:
@@ -39,6 +40,7 @@ export const experiences = [
   },
   {
     company: "Sensara Technologies",
+    logo: "/sensara-logo.png",
     role: "Research Engineer — Aerospace & Defence",
     period: "Mar 2024 - Dec 2024",
     description:
@@ -51,7 +53,8 @@ export const experiences = [
     tech: ["Python", "TensorFlow", "React", "RAG", "LLMs", "Shapley", "DeepLift"],
   },
   {
-    company: "E-commerce Startup",
+    company: "CompanyStore.io",
+    logo: "/companystore-logo.avif",
     role: "Data Analyst Intern",
     period: "Jun 2023 - Aug 2023",
     description:
@@ -66,6 +69,14 @@ export const experiences = [
 ];
 
 export const research = [
+  {
+    title: "Coming Soon",
+    venue: "TBD",
+    year: 2025,
+    status: "In Progress" as const,
+    abstract:
+      "Details coming soon — stay tuned.",
+  },
   {
     title: "Explainable AI: A Retrieval-Augmented Generation Based Framework for Model Interpretability",
     venue: "ICAART 2025",
@@ -156,7 +167,7 @@ export const technologies: TechCategory[] = [
       { name: "Jenkins", icon: "jenkins" },
       { name: "Cursor", icon: null },
       { name: "Claude Code", icon: "anthropic" },
-      { name: "Codex", icon: "openai" },
+      { name: "Codex", icon: null },
     ],
   },
   {
@@ -164,7 +175,7 @@ export const technologies: TechCategory[] = [
     items: [
       { name: "Linux", icon: "linux" },
       { name: "Unix", icon: null },
-      { name: "AWS", icon: "amazonwebservices" },
+      { name: "AWS", icon: null },
     ],
   },
 ];

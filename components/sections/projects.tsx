@@ -18,11 +18,11 @@ export function Projects() {
         </h2>
       </BlurFade>
 
-      <div className="mt-10 grid gap-4 sm:grid-cols-2">
+      <div className="mt-10 grid grid-rows-subgrid gap-4 sm:grid-cols-2">
         {projects.map((project, index) => (
-          <BlurFade key={project.title} delay={0.15 + index * 0.1}>
+          <BlurFade key={project.title} delay={0.15 + index * 0.1} className="flex">
             <ExpandableCard
-              className="h-full"
+              className="flex-1"
               expandedContent={
                 <div className="space-y-3">
                   <ul className="space-y-2">

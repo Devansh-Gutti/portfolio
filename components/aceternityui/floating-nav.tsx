@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 interface NavItem {
   name: string;
@@ -54,7 +53,6 @@ export function FloatingNav({ navItems, className }: FloatingNavProps) {
         >
           Contact
         </a>
-        <ThemeToggle className="hidden sm:flex" />
         <button
           className="sm:hidden text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -88,7 +86,6 @@ export function FloatingNav({ navItems, className }: FloatingNavProps) {
           >
             Contact
           </a>
-          <ThemeToggle />
         </motion.div>
       )}
     </AnimatePresence>

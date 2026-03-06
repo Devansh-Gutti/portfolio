@@ -2,7 +2,7 @@
 
 import { SectionWrapper } from "@/components/animations/section-wrapper";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { ExpandableCard } from "@/components/animations/expandable-card";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { research } from "@/lib/data";
 import { ExternalLink, FileText } from "lucide-react";
 
@@ -29,47 +29,45 @@ export function Research() {
         </p>
       </BlurFade>
 
-      <div className="mt-10 flex flex-col gap-4">
+      <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {research.map((paper, index) => (
           <BlurFade key={paper.title} delay={0.15 + index * 0.1}>
-            <ExpandableCard
-              expandedContent={
-                <div className="space-y-3">
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {paper.abstract}
-                  </p>
-                  {paper.link && (
-                    <a
-                      href={paper.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-muted-foreground"
-                    >
-                      <ExternalLink size={14} />
-                      View Paper
-                    </a>
-                  )}
+            <div className="relative h-full rounded-xl p-px">
+              <GlowingEffect
+                spread={40}
+                glow
+                disabled={false}
+                proximity={64}
+                inactiveZone={0.01}
+                borderWidth={2}
+              />
+              <div className="relative flex h-full flex-col rounded-xl border border-border bg-card/50 p-5 backdrop-blur-sm sm:p-6">
+                <div className="flex items-center gap-2">
+                  <FileText size={16} className="text-muted-foreground" />
+                  <StatusBadge status={paper.status} />
                 </div>
-              }
-            >
-              <div className="flex items-start gap-3">
-                <div className="mt-1 shrink-0 text-muted-foreground">
-                  <FileText size={18} />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <StatusBadge status={paper.status} />
-                    <span className="text-xs font-mono text-muted-foreground">
-                      {paper.venue} · {paper.year}
-                    </span>
-                  </div>
-                  <h3 className="mt-2 text-base font-semibold leading-snug text-foreground sm:text-lg">
-                    {paper.title}
-                  </h3>
-                </div>
+                <span className="mt-2 text-xs font-mono text-muted-foreground">
+                  {paper.venue} · {paper.year}
+                </span>
+                <h3 className="mt-3 text-base font-semibold leading-snug text-foreground">
+                  {paper.title}
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {paper.abstract}
+                </p>
+                {"link" in paper && paper.link && (
+                  <a
+                    href={paper.link as string}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-muted-foreground"
+                  >
+                    <ExternalLink size={14} />
+                    View Paper
+                  </a>
+                )}
               </div>
-            </ExpandableCard>
+            </div>
           </BlurFade>
         ))}
       </div>

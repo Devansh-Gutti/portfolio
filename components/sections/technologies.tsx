@@ -2,6 +2,7 @@
 
 import { SectionWrapper } from "@/components/animations/section-wrapper";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import { CpuArchitecture } from "@/components/ui/cpu-architecture";
 import { technologies } from "@/lib/data";
 import type { TechItem } from "@/lib/data";
 
@@ -34,30 +35,40 @@ export function Technologies() {
       id="technologies"
       className="relative mx-auto max-w-5xl px-6 py-16 md:py-20"
     >
-      <BlurFade delay={0.1}>
-        <h2 className="text-3xl font-bold sm:text-4xl font-display">
-          Technologies
-        </h2>
-        <p className="mt-3 text-muted-foreground">
-          Tools and technologies I work with day-to-day
-        </p>
-      </BlurFade>
-
-      <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {technologies.map((category, catIndex) => (
-          <BlurFade key={category.category} delay={0.15 + catIndex * 0.06}>
-            <div>
-              <h3 className="mb-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
-                {category.category}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {category.items.map((item) => (
-                  <TechBadge key={item.name} item={item} />
-                ))}
-              </div>
-            </div>
+      <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:gap-12">
+        <div className="flex-1">
+          <BlurFade delay={0.1}>
+            <h2 className="text-3xl font-bold sm:text-4xl font-display">
+              Technologies
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              Tools and technologies I work with day-to-day
+            </p>
           </BlurFade>
-        ))}
+
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {technologies.map((category, catIndex) => (
+              <BlurFade key={category.category} delay={0.15 + catIndex * 0.06}>
+                <div>
+                  <h3 className="mb-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+                    {category.category}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {category.items.map((item) => (
+                      <TechBadge key={item.name} item={item} />
+                    ))}
+                  </div>
+                </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+
+        <BlurFade delay={0.2} className="shrink-0 w-full md:w-80 lg:w-96">
+          <div className="rounded-xl border border-border bg-card/30 p-4 backdrop-blur-sm">
+            <CpuArchitecture text="GPU" />
+          </div>
+        </BlurFade>
       </div>
     </SectionWrapper>
   );

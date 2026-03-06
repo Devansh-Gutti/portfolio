@@ -51,11 +51,27 @@ export function Experience() {
               }
             >
               <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {exp.company}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{exp.role}</p>
+                <div className="flex items-start gap-3">
+                  {exp.logo ? (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      src={exp.logo.startsWith("http") ? exp.logo : `https://cdn.simpleicons.org/${exp.logo}`}
+                      alt={exp.company}
+                      width={24}
+                      height={24}
+                      className="mt-0.5 shrink-0 rounded-sm"
+                    />
+                  ) : "logoText" in exp && exp.logoText ? (
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-foreground text-background text-[10px] font-bold font-mono">
+                      {exp.logoText as string}
+                    </span>
+                  ) : null}
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {exp.company}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">{exp.role}</p>
+                  </div>
                 </div>
                 <span className="text-xs font-mono text-muted-foreground shrink-0">
                   {exp.period}
