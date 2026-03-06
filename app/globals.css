@@ -61,15 +61,6 @@ html.lenis body {
   overflow: hidden;
 }
 
-.tech-icon {
-  filter: brightness(0);
-  transition: filter 0.3s ease;
-}
-
-.dark .tech-icon {
-  filter: brightness(0) invert(1);
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

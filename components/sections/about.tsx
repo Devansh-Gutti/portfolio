@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { SectionWrapper } from "@/components/animations/section-wrapper";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import { ImageGeneration } from "@/components/ui/ai-chat-image-generation-1";
 
 export function About() {
   return (
@@ -15,34 +17,49 @@ export function About() {
         </h2>
       </BlurFade>
 
-      <BlurFade delay={0.2}>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          I&apos;m a software engineer at NVIDIA on the CUDA Safety team,
-          building cross-VM AI inference infrastructure for safety-critical
-          autonomous driving platforms. I love taking ideas from prototype to
-          production — collaborating across every stage of the product lifecycle,
-          from early MVPs through full-scale deployment. I also co-authored a
-          research paper on RAG-based Explainable AI, presented at ICAART 2025.
-        </p>
-      </BlurFade>
+      <div className="mt-8 flex flex-col gap-10 md:flex-row md:items-start md:gap-12">
+        <div className="flex-1 space-y-5">
+          <BlurFade delay={0.2}>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              I&apos;m a software engineer working on CUDA safety at NVIDIA,
+              where I spend my time building systems for AI running on
+              safety-critical platforms. I enjoy taking ideas from rough
+              prototypes to something that actually runs in production, and
+              collaborating with people across the whole build process.
+            </p>
+          </BlurFade>
 
-      <BlurFade delay={0.3}>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          I&apos;m a strong advocate for integrating Gen AI into development
-          workflows — tools like Cursor, Claude Code, and Codex have become a
-          natural part of how I build and ship software. I enjoy finding the
-          right balance between AI-assisted velocity and engineering rigour.
-        </p>
-      </BlurFade>
+          <BlurFade delay={0.3}>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              I&apos;m a big believer in using Gen AI as a force multiplier
+              while building software. Tools like Cursor, Claude Code, and Codex
+              are a natural part of my workflow, and I enjoy figuring out how to
+              combine AI-assisted speed with solid engineering.
+            </p>
+          </BlurFade>
 
-      <BlurFade delay={0.35}>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          Outside of work, I&apos;m pretty adventurous — I love team sports,
-          travelling, trekking, and exploring new places. I thrive in
-          collaborative environments, whether that&apos;s on the field or
-          in a codebase.
-        </p>
-      </BlurFade>
+          <BlurFade delay={0.35}>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              Outside of work you&apos;ll probably find me playing sports,
+              travelling somewhere new, or out on a trek. I tend to thrive in
+              collaborative and exploratory environments.
+            </p>
+          </BlurFade>
+        </div>
+
+        <BlurFade delay={0.25} className="shrink-0 md:w-72 lg:w-80">
+          <ImageGeneration>
+            <Image
+              src="/about-me.png"
+              alt="Devansh Guttikonda"
+              width={320}
+              height={480}
+              className="w-full object-cover"
+              priority
+            />
+          </ImageGeneration>
+        </BlurFade>
+      </div>
     </SectionWrapper>
   );
 }
