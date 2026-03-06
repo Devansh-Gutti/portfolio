@@ -82,7 +82,7 @@ export const research = [
     year: 2025,
     status: "Submitted" as const,
     abstract:
-      "Had the opportunity to work with multiple faculty members of PES University and doctors to develop a novel two-stage ML model integrating AA-induced platelet aggregation, serum biomarkers, and clinical variables to predict recurrent vascular events after ischemic stroke. Uses Random Forest regression and classification with GAN-based class balancing, with interpretability via SHAP and LIME.",
+      "Had the opportunity to work with multiple faculty members of PES University and doctors to develop a novel two-stage ML model integrating biomarkers and clinical variables to predict recurrent vascular events after ischemic stroke. Uses Random Forest regression and classification with GAN-based class balancing.",
   },
   {
     title: "Explainable AI: A Retrieval-Augmented Generation Based Framework for Model Interpretability",
