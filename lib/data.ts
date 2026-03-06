@@ -9,9 +9,17 @@ export const siteConfig = {
   resumeUrl: "/DevanshG.pdf",
 };
 
+export const heroFacts = [
+  "Thanks for stopping by — welcome to my digital space!",
+  "You'll find me working across GPU platforms, accelerated computing, and safety-critical software.",
+  "And yes — I love pushing the boundaries with vibe coding :).",
+];
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Experience", link: "#experience" },
+  { name: "Research", link: "#research" },
+  { name: "Education", link: "#education" },
   { name: "Projects", link: "#projects" },
   { name: "Contact", link: "#contact" },
 ];
@@ -20,25 +28,27 @@ export const experiences = [
   {
     company: "NVIDIA",
     role: "Software Engineer — CUDA Safety Team",
-    period: "Jul 2025 - Present",
+    period: "Jan 2025 - Present",
     description:
-      "Designing cross-VM AI inference infrastructure for safety-critical autonomous driving platforms. Building zero-copy shared-memory data paths and priority-based scheduling to enable GPU-accelerated perception workloads across mixed-criticality VMs. Co-inventor on a patent for inter-VM inference proxy architecture.",
+      "Joined as a SPRING Intern on the OpenCL Driver team and transitioned to full-time on the CUDA Safety team. Building cross-VM AI inference infrastructure for safety-critical autonomous driving platforms.",
+    details: [
+      "Designed zero-copy shared-memory data paths and priority-based scheduling for GPU-accelerated perception workloads across mixed-criticality VMs",
+      "Co-inventor on a patent for inter-VM inference proxy architecture with nanosecond latency profiling",
+      "Leveraged Gen AI tooling to rapidly onboard to CUDA and OpenCL internals during the SPRING internship",
+    ],
     tech: ["C++", "CUDA", "TensorRT", "QNX", "Linux", "Python"],
-  },
-  {
-    company: "NVIDIA",
-    role: "SPRING Intern — OpenCL Driver Team",
-    period: "Jan 2025 - Jul 2025",
-    description:
-      "Ramped up on CUDA and OpenCL internals, contributing to driver-level features while learning GPU programming from the ground up. Leveraged Gen AI tooling to accelerate onboarding and deepen understanding of low-level GPU architecture.",
-    tech: ["C++", "CUDA", "OpenCL", "Python"],
   },
   {
     company: "Sensara Technologies",
     role: "Research Engineer — Aerospace & Defence",
     period: "Mar 2024 - Dec 2024",
     description:
-      "Engineered deep learning cost estimation framework with Explainable AI dashboards (Shapley, DeepLift) for manufacturing process optimization. Co-authored a RAG-based XAI framework paper presented at ICAART 2025.",
+      "Engineered deep learning cost estimation framework with Explainable AI dashboards for manufacturing process optimization.",
+    details: [
+      "Executed ETL on 10,000 rows of raw material data, building a deep learning framework for multi-phase cost estimation",
+      "Designed interactive ReactJS dashboards powered by Shapley and DeepLift for explainable decision-making",
+      "Co-authored a RAG-based Explainable AI framework paper, presented orally at ICAART 2025",
+    ],
     tech: ["Python", "TensorFlow", "React", "RAG", "LLMs", "Shapley", "DeepLift"],
   },
   {
@@ -47,6 +57,11 @@ export const experiences = [
     period: "Jun 2023 - Aug 2023",
     description:
       "Built ETL pipeline on 150K rows integrating Magento and Viniculum APIs. Deployed unified analytics store on Zoho for real-time trend analysis.",
+    details: [
+      "Developed an ETL pipeline integrating Magento and Viniculum datasets through APIs, with testing via Postman",
+      "Deployed a unified data store on Zoho Analytics for real-time sales trend analysis",
+      "Built custom dashboards visualizing sales KPIs tailored to client-specific requirements",
+    ],
     tech: ["Python", "Pandas", "Postman", "Zoho Analytics"],
   },
   {
@@ -55,29 +70,136 @@ export const experiences = [
     period: "Jan 2023 - May 2023",
     description:
       "Led team from ideation to customer validation building an Extended Reality educational platform MVP.",
+    details: [
+      "Collaboratively led a team through ideation, prototyping, customer discovery, and validation stages",
+      "Developed and validated a Minimum Viable Product by engaging with potential users",
+      "Ensured a compelling value proposition for an Extended Reality educational platform",
+    ],
     tech: ["XR", "Prototyping", "Customer Discovery"],
+  },
+];
+
+export const research = [
+  {
+    title: "Explainable AI: A Retrieval-Augmented Generation Based Framework for Model Interpretability",
+    venue: "ICAART 2025",
+    year: 2025,
+    status: "Published" as const,
+    abstract:
+      "Introduces a novel RAG-based framework leveraging Large Language Models and domain-specific knowledge bases to provide clear, interactive explanations of model outputs. Demonstrated across healthcare, finance, and manufacturing, offering a scalable solution for making ML/DL systems more trustworthy and accessible for non-technical users.",
+    link: "https://www.insticc.org/node/TechnicalProgram/icaart/2025/presentationDetails/132413",
+  },
+  {
+    title: "YouTube Viralomics: A Scoring Framework by Analyzing Engagement Metrics in the Indian Context",
+    venue: "Under Review",
+    year: 2024,
+    status: "Submitted" as const,
+    abstract:
+      "Develops a unique 'viralomics' framework to measure virality using 10,000 trending YouTube videos from Indian creators. Employs statistical techniques for feature elimination, regression analysis, and Particle Swarm Optimization to derive a virality score achieving R² of 0.913 and MSE of 0.0020, validated through a two-step process.",
+  },
+];
+
+export const education = [
+  {
+    institution: "PES University",
+    degree: "B.Tech Computer Science Engineering",
+    period: "Sep 2021 - Jun 2025",
+    grade: "CGPA: 8.50",
+    highlights: [
+      "MRD Scholarship — Awarded to the top 20% of students",
+      "Teaching Assistant — Centre of Innovation and Entrepreneurship",
+      "Event Lead — Esummit, Maaya '23 and '24",
+    ],
+  },
+  {
+    institution: "Gear Innovative International School",
+    degree: "CBSE Senior Secondary",
+    period: "Jun 2019 - Jun 2021",
+    grade: "Class 12: 88% | Class 10: 91.6%",
+    highlights: [],
+  },
+];
+
+export interface TechItem {
+  name: string;
+  icon: string | null;
+}
+
+export interface TechCategory {
+  category: string;
+  items: TechItem[];
+}
+
+export const technologies: TechCategory[] = [
+  {
+    category: "Technologies",
+    items: [
+      { name: "CUDA", icon: "nvidia" },
+      { name: "OpenCL", icon: null },
+      { name: "TensorRT", icon: null },
+    ],
+  },
+  {
+    category: "Languages",
+    items: [
+      { name: "Python", icon: "python" },
+      { name: "C", icon: "c" },
+      { name: "C++", icon: "cplusplus" },
+      { name: "Java", icon: "openjdk" },
+      { name: "SQL", icon: null },
+    ],
+  },
+  {
+    category: "Frameworks & Libraries",
+    items: [
+      { name: "Django", icon: "django" },
+      { name: "Node.js", icon: "nodedotjs" },
+      { name: "Next.js", icon: "nextdotjs" },
+      { name: "Keras", icon: "keras" },
+      { name: "PyTorch", icon: "pytorch" },
+      { name: "TensorFlow", icon: "tensorflow" },
+      { name: "Scikit-Learn", icon: "scikitlearn" },
+    ],
+  },
+  {
+    category: "Databases",
+    items: [
+      { name: "MongoDB", icon: "mongodb" },
+      { name: "MySQL", icon: "mysql" },
+    ],
+  },
+  {
+    category: "Tools",
+    items: [
+      { name: "Git", icon: "git" },
+      { name: "Docker", icon: "docker" },
+      { name: "Kubernetes", icon: "kubernetes" },
+      { name: "Jenkins", icon: "jenkins" },
+      { name: "Cursor", icon: null },
+      { name: "Claude Code", icon: "anthropic" },
+      { name: "Codex", icon: "openai" },
+    ],
+  },
+  {
+    category: "Platforms",
+    items: [
+      { name: "Linux", icon: "linux" },
+      { name: "Unix", icon: null },
+      { name: "AWS", icon: "amazonwebservices" },
+    ],
   },
 ];
 
 export const projects = [
   {
-    title: "Explainable AI: A RAG-Based Framework for Model Interpretability",
-    description:
-      "Co-authored research paper presenting a Retrieval-Augmented Generation framework for model interpretability. Demonstrated across healthcare, finance, and manufacturing. Presented orally at ICAART 2025.",
-    tech: ["RAG", "LLMs", "Shapley", "DeepLift", "Python"],
-    github: "https://github.com/Devansh-Gutti",
-  },
-  {
-    title: "Youtube Viralomics",
-    description:
-      "Curated dataset of 10,000 trending YouTube videos and developed a novel statistical framework for measuring virality.",
-    tech: ["Python", "Pandas", "NumPy", "Scikit-Learn", "YouTube Data API"],
-    github: "https://github.com/Devansh-Gutti",
-  },
-  {
     title: "CloudCommerce",
     description:
       "Microservices e-commerce platform with REST APIs, Docker/Kubernetes orchestration, and automated CI/CD via Jenkins.",
+    details: [
+      "Developed REST APIs for user, product, and order management modules",
+      "Containerized microservices with Docker and orchestrated with Kubernetes for scalable deployment",
+      "Automated CI/CD pipeline with Jenkins and Git for seamless integration",
+    ],
     tech: ["Docker", "Kubernetes", "Jenkins", "React", "MongoDB"],
     github: "https://github.com/Devansh-Gutti",
   },
@@ -85,37 +207,12 @@ export const projects = [
     title: "AttendAI",
     description:
       "Real-time facial recognition attendance system for educational institutions using OpenCV with MySQL backend.",
+    details: [
+      "Implemented real-time facial recognition using OpenCV for accurate attendance tracking",
+      "Integrated MySQL for database management and Tkinter for a user-friendly interface",
+      "Designed for educational institutions to automate attendance logging",
+    ],
     tech: ["Python", "OpenCV", "MySQL", "Tkinter"],
     github: "https://github.com/Devansh-Gutti",
   },
-];
-
-export const skills = [
-  "C++",
-  "CUDA",
-  "TensorRT",
-  "QNX",
-  "Python",
-  "Claude Code",
-  "Cursor",
-  "Codex",
-  "Java",
-  "TensorFlow",
-  "PyTorch",
-  "Keras",
-  "Scikit-Learn",
-  "Docker",
-  "Kubernetes",
-  "AWS",
-  "React",
-  "Next.js",
-  "TypeScript",
-  "MySQL",
-  "MongoDB",
-  "Neo4j",
-  "Git",
-  "Jenkins",
-  "Pandas",
-  "NumPy",
-  "XGBoost",
 ];

@@ -2,7 +2,7 @@
 
 import { SectionWrapper } from "@/components/animations/section-wrapper";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { MagicCard } from "@/components/magicui/magic-card";
+import { ExpandableCard } from "@/components/animations/expandable-card";
 import { projects } from "@/lib/data";
 import { Github } from "lucide-react";
 
@@ -13,33 +13,49 @@ export function Projects() {
       className="relative mx-auto max-w-5xl px-6 py-24 md:py-32"
     >
       <BlurFade delay={0.1}>
-        <h2 className="text-3xl font-bold sm:text-4xl">
-          <span className="text-accent">Projects</span>
+        <h2 className="text-3xl font-bold sm:text-4xl font-display">
+          Projects
         </h2>
       </BlurFade>
 
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-4 sm:grid-cols-2">
         {projects.map((project, index) => (
           <BlurFade key={project.title} delay={0.15 + index * 0.1}>
-            <MagicCard className="flex h-full flex-col">
-              <div className="flex items-start justify-between">
-                <h3 className="text-lg font-bold text-foreground">
-                  {project.title}
-                </h3>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground transition-colors hover:text-accent"
-                  aria-label={`View ${project.title} on GitHub`}
-                >
-                  <Github size={18} />
-                </a>
-              </div>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+            <ExpandableCard
+              className="h-full"
+              expandedContent={
+                <div className="space-y-3">
+                  <ul className="space-y-2">
+                    {project.details.map((detail) => (
+                      <li
+                        key={detail}
+                        className="flex items-start gap-2 text-sm leading-relaxed text-muted-foreground"
+                      >
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted-foreground/50" />
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-muted-foreground"
+                  >
+                    <Github size={14} />
+                    View on GitHub
+                  </a>
+                </div>
+              }
+            >
+              <h3 className="text-lg font-semibold text-foreground">
+                {project.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {project.description}
               </p>
-              <div className="mt-4 flex flex-wrap gap-2">
+              <div className="mt-3 flex flex-wrap gap-2">
                 {project.tech.map((t) => (
                   <span
                     key={t}
@@ -49,7 +65,7 @@ export function Projects() {
                   </span>
                 ))}
               </div>
-            </MagicCard>
+            </ExpandableCard>
           </BlurFade>
         ))}
       </div>

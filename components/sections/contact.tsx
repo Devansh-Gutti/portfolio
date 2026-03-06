@@ -17,7 +17,7 @@ export function Contact() {
 
       <div className="relative z-10 flex flex-col items-center text-center">
         <BlurFade delay={0.1}>
-          <h2 className="text-3xl font-bold sm:text-4xl">
+          <h2 className="text-3xl font-bold sm:text-4xl font-display">
             Get In <span className="text-accent">Touch</span>
           </h2>
         </BlurFade>

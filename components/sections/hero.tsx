@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { TextGenerateEffect } from "@/components/aceternityui/text-generate-effect";
 import { Spotlight } from "@/components/aceternityui/spotlight";
-import { siteConfig } from "@/lib/data";
+import { TerminalTypewriter } from "@/components/animations/terminal-typewriter";
+import { ClaudeLogo } from "@/components/icons/claude-logo";
+import { siteConfig, heroFacts } from "@/lib/data";
 
 const ParticleField = dynamic(
   () =>
@@ -43,14 +45,23 @@ export function Hero() {
           {siteConfig.title}
         </motion.p>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.3, duration: 0.6 }}
-          className="mt-4 max-w-xl text-muted-foreground"
+          className="mt-6 flex items-center gap-3 rounded-lg border border-border/50 bg-card/30 px-4 py-3 backdrop-blur-sm max-w-xl w-full"
         >
-          {siteConfig.tagline}
-        </motion.p>
+          <motion.div
+            animate={{ rotate: [0, 10, -10, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="shrink-0"
+          >
+            <ClaudeLogo size={24} className="text-muted-foreground" />
+          </motion.div>
+          <div className="flex-1 text-left">
+            <TerminalTypewriter facts={heroFacts} />
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
