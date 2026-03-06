@@ -5,6 +5,7 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { education } from "@/lib/data";
 import { GraduationCap } from "lucide-react";
+import { ClaudeLogo } from "@/components/icons/claude-logo";
 
 export function Education() {
   return (
@@ -16,6 +17,12 @@ export function Education() {
         <h2 className="text-3xl font-bold sm:text-4xl font-display">
           Education
         </h2>
+        <div className="mt-3 flex items-end gap-2">
+          <p className="text-muted-foreground">
+            Four years learning how computers think — and then AI showed up and started doing it faster
+          </p>
+          <ClaudeLogo size={22} className="shrink-0 text-muted-foreground mb-[-1px]" />
+        </div>
       </BlurFade>
 
       <div className="mt-10 flex flex-col gap-4">
